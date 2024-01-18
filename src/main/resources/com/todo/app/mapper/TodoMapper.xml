@@ -18,7 +18,9 @@
     <update id="update" parameterType="com.todo.app.entity.Todo">
         update todo_items set
         title = #{title},
-        time_limit = to_date(#{time_limit}, 'YY-MM-DD')
+        time_limit = to_date(#{time_limit}, 'YY-MM-DD'),
+        done_flg = #{done_flg}
         where id = #{id}
     </update>
+    
 </mapper>
