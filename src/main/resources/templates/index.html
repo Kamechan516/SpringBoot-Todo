@@ -9,6 +9,7 @@
     <h1>Todoリスト</h1>
     <h3>タスク一覧</h3>
     <form method="post" th:action="@{/update}" th:each="todo : ${todos}" >
+        <input type="checkbox" name="done_flg" value="1"/>
         <input type="hidden" name="id" th:value="${todo.id}"/>
         <input type="text" name="title" th:value="${todo.title}"/>
         <input type="date" name="time_limit" th:value="${todo.time_limit}"/>
