@@ -20,7 +20,9 @@ public class TodoController {
     public String index(Model model) {
         // List<Todo> todoList = todoMapper.selectAll();
         List<Todo> list = todoMapper.selectIncomplete();
+        List<Todo> donelist = todoMapper.selectComplete();
         model.addAttribute("todos", list);
+        model.addAttribute("doneTodos", donelist);
         return "index";
     }
 
