@@ -10,6 +10,10 @@
         select * from todo_items
     </select>
 
+    <select id="selectIncomplete" resultType="com.todo.app.entity.Todo">
+        select * from todo_items where done_flg = 0
+    </select>
+
     <insert id="add" parameterType="com.todo.app.entity.Todo">
         insert into todo_items (title, time_limit)
         values (#{title}, to_date(#{time_limit}, 'YY-MM-DD'))
