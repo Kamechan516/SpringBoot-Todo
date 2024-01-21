@@ -30,5 +30,9 @@
         done_flg = #{done_flg}
         where id = #{id}
     </update>
+
+    <delete id="delete" parameterType="com.todo.app.entity.Todo">
+        delete from todo_items where done_flg = 1
+    </delete>
     
 </mapper>
